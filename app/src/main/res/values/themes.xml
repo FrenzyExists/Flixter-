@@ -1,9 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.FlixterPlus" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+        <item name="colorPrimary">@color/BG2</item>
+        <item name="colorPrimaryVariant">@color/ACC</item>
+        <item name="colorOnPrimary">@color/FG2</item>
 
+        <item name="colorPrimaryDark">@color/BG2</item>
+        <item name="android:textColor">@color/FG2</item>
+
+        <item name="colorSecondary">@color/ACC</item>
+        <item name="colorSecondaryVariant">@color/FG2</item>
+        <item name="colorOnSecondary">@color/BG2</item>
+    </style>
     <style name="Theme.FlixterPlus" parent="Base.Theme.FlixterPlus" />
 </resources>
