@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import com.pikachu.flixterplus.R.id
 import com.pikachu.flixterplus.databinding.ActivityMainBinding
 
+//https://api.themoviedb.org/3/movie/now_playing?api-key=a07e22bc18f5cb106bfe4cc1f83ad8ed
+//https://api.themoviedb.org/3/movie/now_playing?&api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed
+const val BASE_URL = "https://api.themoviedb.org/3/movie/"
+const val SEARCH_API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
@@ -20,11 +24,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView2.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.explore -> replaceFragment(ExploreFragment())
-                R.id.search -> replaceFragment(SearchFragment())
-                R.id.wishlist -> replaceFragment(WishlistFragment())
-                R.id.about -> replaceFragment(AboutFragment())
-
+                id.explore -> replaceFragment(ExploreFragment())
+                id.search -> replaceFragment(SearchFragment())
+                id.wishlist -> replaceFragment(WishlistFragment())
+                id.about -> replaceFragment(AboutFragment())
                 else -> {
 
                 }

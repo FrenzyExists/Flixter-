@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="140dp"
+        android:layout_height="210dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/imageViewPoster"
+            android:layout_width="140dp"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="These Nuts" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        android:textSize="16sp"
+        android:textColor="@color/FG"
+        android:padding="8dp" />
+
+</LinearLayout>

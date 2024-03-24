@@ -12,11 +12,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <SearchView
+        <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="40dp"/>
 
-        </SearchView>
+
 
         <TextView
             android:id="@+id/textView"
@@ -24,14 +24,15 @@
             android:layout_height="wrap_content"
             android:text="Latest Movies" />
 
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/latestMovieRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="31dp"
             android:background="?android:attr/listDivider" />
 
         <TextView
@@ -40,16 +41,17 @@
             android:layout_height="wrap_content"
             android:text="Upcoming Movies" />
 
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:id="@+id/upcomingMovieRecyclerView">
 
-        </HorizontalScrollView>
+        </androidx.recyclerview.widget.RecyclerView>
 
         <View
             android:id="@+id/divider2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:background="?android:attr/listDivider" />
 
         <TextView
@@ -57,6 +59,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Categories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/categoriesRecyclerView">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 
