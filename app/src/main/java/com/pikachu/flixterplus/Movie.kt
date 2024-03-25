@@ -1,8 +1,6 @@
 package com.pikachu.flixterplus
 
-import android.support.annotation.Keep
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.SerializedName
 
 abstract class IMovie {
     open val title: String? = null
@@ -23,51 +21,55 @@ abstract class IMovie {
  * - Upcoming
  * - Could also work for People but I'll abstract that later
  */
-@Keep
-@Serializable
 class GenericMovieListResponse (
-    @SerialName("result")
+    @SerializedName("result")
     val response: List<MovieGeneric>?
 )
 
-@Keep
-@Serializable
+
 class MovieGeneric(
-    @SerialName("title")
-    override val title: String,
+    @SerializedName("title")
+     var title: String,
 
-    @SerialName("overview")
-    override val overview: String?,
+    @SerializedName("overview")
+     var overview: String?,
 
-    @SerialName("id")
-    override val id: String?,
+    @SerializedName("id")
+     var id: String?,
 
-    @SerialName("release_date")
-    override val releaseDate: String?,
+    @SerializedName("release_date")
+     var releaseDate: String?,
 
-    @SerialName("vote_average")
-    override val voteAverage: String?,
+    @SerializedName("vote_average")
+     var voteAverage: String?,
 
-    @SerialName("vote_count")
-    override val voteCount: String?,
+    @SerializedName("vote_count")
+     var voteCount: String?,
 
-    @SerialName("poster_path")
-    override val posterPath: String?,
+    @SerializedName("poster_path")
+    var posterPath: String?,
 
-    @SerialName("backdrop_path")
-    override val backdropPath: String?
-) : IMovie(), java.io.Serializable
+    @SerializedName("backdrop_path")
+    var backdropPath: String?
+)
 
-@Keep
-@Serializable
+class Categories(
+    @SerializedName("id")
+    var id: String?,
+
+    @SerializedName("name")
+    var name: String?,
+)
+
+
 class MovieDetails(
-    @SerialName("budget")
+    @SerializedName("budget")
     val budget: String?,
 
-    @SerialName("revenue")
+    @SerializedName("revenue")
     val revenue: String?,
 
-    @SerialName("runtime")
+    @SerializedName("runtime")
     val runtime: String?,
-) : IMovie(), java.io.Serializable
+) : IMovie()
 

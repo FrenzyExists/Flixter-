@@ -9,6 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.gson.Gson
+
+private const val getImgURL = "https://image.tmdb.org/t/p/w500"
 
 class GenericMovieRecyclerViewAdapter(private val context: Context, private val movies: MutableList<MovieGeneric>) :
     RecyclerView.Adapter<GenericMovieRecyclerViewAdapter.ViewHolder> () {
@@ -20,6 +23,19 @@ class GenericMovieRecyclerViewAdapter(private val context: Context, private val 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val myMovie = movies[position]
         holder.bind(myMovie)
+
+        holder.itemView.setOnClickListener{
+            val m = movies[position]
+            m.let {
+                val gson = Gson()
+                val movieJson = gson.toJson(m)
+
+                val intent = Intent(context, MovieDetailsActivity::class.java)
+                intent.putExtra("MOVIE_EXTRA", movieJson) // Pass movie object as JSON string
+                context.startActivity(intent)
+            }
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -40,9 +56,10 @@ class GenericMovieRecyclerViewAdapter(private val context: Context, private val 
             titleTextView.text = movie.title
 
             Glide.with(context)
-                .load(movie.posterPath)
+                .load(getImgURL + movie.posterPath)
                 .into(mediaImageView)
         }
+
 
         override fun onClick(v: View?) {
             // Get selected article

@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Background color of the rounded square -->
+    <solid android:color="@color/BG2" /> <!-- Change color as needed -->
+
+    <!-- Radius of the rounded corners -->
+    <corners android:radius="20dp" /> <!-- Adjust radius as needed -->
+
+</shape>
