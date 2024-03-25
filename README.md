@@ -27,15 +27,22 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 - [x] Bottom navbar with extra fragments for future features or something
-
+- [x] Custom icon
 
 ## Video Walkthrough
 
+### NEW VERSION
+
+![Animation2](https://github.com/FrenzyExists/Flixter-/assets/47986470/1a7a57e3-a725-46fc-867c-999770b8889a)
+
+
+### OLD VERSION
 ![Animation2](https://github.com/FrenzyExists/Flixter/assets/47986470/3213f81b-9878-482f-a8fd-f262db231f5b)
+
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Pain 🥲
 
 
 
